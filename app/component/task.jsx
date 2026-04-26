@@ -32,7 +32,7 @@ const Task = () => {
         return val.name.toLowerCase().includes(value.toLowerCase());
       }),
     );
-  }, 800);
+  }, 100);
   return (
     <div className="flex flex-col gap-5">
       <input
