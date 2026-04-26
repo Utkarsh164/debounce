@@ -46,7 +46,30 @@ const Task = () => {
       />
 
       {print.map((val) => (
-        <div key={val.id}>Name: {val.name}</div>
+        <div
+          key={val.id}
+          className="bg-white shadow-md rounded-2xl p-4 border border-gray-200"
+        >
+          <h2 className="text-lg font-semibold text-gray-800">{val.name}</h2>
+
+          <p className="text-sm text-gray-600">@{val.username}</p>
+
+          <div className="mt-2 text-sm text-gray-700">
+            <p>Email: {val.email}</p>
+            <p>Phone: {val.phone}</p>
+            <p>Website: {val.website}</p>
+          </div>
+
+          <div className="mt-2 text-sm text-gray-500">
+            <p>
+              Address: {val.address.street}, {val.address.city}
+            </p>
+          </div>
+
+          <div className="mt-3 text-sm text-blue-600 font-medium">
+            Company: {val.company.name}
+          </div>
+        </div>
       ))}
     </div>
   );
